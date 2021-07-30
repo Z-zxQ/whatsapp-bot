@@ -189,7 +189,6 @@ const request = require('request');
 const cheerio = require('cheerio') 
 const ffmpeg = require('fluent-ffmpeg')
 const imgbb = require('imgbb-uploader')
-const config = JSON.parse(fs.readFileSync('./config.json'))
 const a = '```'
 ky_ttt = []
 tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
