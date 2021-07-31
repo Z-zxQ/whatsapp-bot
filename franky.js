@@ -700,6 +700,7 @@ men =
 ├ *${prefix}mediafire*
 ├ *${prefix}fbdl*
 ├ *${prefix}fontdown*
+├ *${prefix}yts*
 ├「 *GAME MENU* 」
 │
 ├ *${prefix}tictactoe*
@@ -746,6 +747,7 @@ if (!isGroup) return reply(mess.only.group)
 						reply('Tidak ada sesi yang berlangsung')
 					}
 					break
+
 
 case 'delsesittt':
 if (isBanned) return reply(mess.only.benned)    
@@ -844,6 +846,7 @@ function formatDate(n, locale = 'id') {
   })
 }
 break
+
 case 'ping':
 let totalchat = await frnky.chats.all()
 				let i = []
@@ -1465,7 +1468,32 @@ reply(result)
 sendFileFromUrl(res[0].down, document, {mimetype: 'font/ttf', filename: res[0].output, quoted: Kyz})
 
 break
-
+case 'yts':
+    case 'ytsearch' :
+    
+  if (!q) return reply('Cari apa?')
+  let results = await yts(q)
+  let wktod = results.all.map(v => {
+    switch (v.type) {
+      case 'video': return `
+      *YOUTUBE SEARCH*
+      
+*${v.title}* (${v.url})
+Duration: ${v.timestamp}
+Uploaded ${v.ago}
+${v.views} views
+      `.trim()
+      case 'channel': return `
+    *TIPE CHANNEL YOUTUBE*
+    
+*${v.name}* (${v.url})
+_${v.subCountLabel} (${v.subCount}) Subscriber_
+${v.videoCount} video
+`.trim()
+    }
+  }).filter(v => v).join('\n========================\n')
+  m.reply(wktod)
+  break
 case 'fontsearch':
 case 'dafonts':
 
@@ -1485,6 +1513,7 @@ reply(result)
 })
 
 break
+
 case 'mediafire':
 
                     if (isBanned) return reply(mess.only.benned)    
