@@ -314,7 +314,7 @@ frnky.on('CB:action,,call', async json => {
     const callerId = json[2][0][1].from;
     console.log("call dari "+ callerId)
         ban.push(callerId)
-        frnky.sendMessage(callerId, "Telpon = Block \nAnda di block Karna Telpon Bot \nSilahkan Chat ownerku untuk membuka block!\nwa.me/+19159752463", MessageType.text)
+        frnky.sendMessage(callerId, "Telpon = Block \nAnda di block Karna Telpon Bot \nSilahkan Chat ownerku untuk membuka block!\nwa.me/+6283183586629", MessageType.text)
         await sleep(5000)
         blocked.push(callerId)
         await frnky.blockUser(callerId, "add") // Block user
