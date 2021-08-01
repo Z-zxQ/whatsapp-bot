@@ -49,10 +49,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/Frankysolo/KY-BOTZ.git"
+    "url": "https://github.com/Frankysolo/bot.git"
   },
   "bugs": {
-    "url": "https://github.com/Frankysolo/KY-BOTZ/issues"
+    "url": "https://github.com/Frankysolo/bot/issues"
   },
-  "homepage": "https://github.com/Frankysolo/KY-BOTZ#readme"
+  "homepage": "https://github.com/Frankysolo/bot#readme"
 }
