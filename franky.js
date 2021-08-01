@@ -686,6 +686,7 @@ men =
 │ • *Total Hit : ${hit_today.length} Hit*
 │ • *Name : ${userky}*
 │ • *Tag : @${sender.split("@")[0]}*
+│ • *Github : github.com/Frankysolo*
 ├「 *DOWNLOAD MENU* 」
 │
 ├ *${prefix}play*
@@ -704,6 +705,7 @@ men =
 ├「 *GAME MENU* 」
 │
 ├ *${prefix}tictactoe*
+├ *${prefix}resetgame*
 ├「 *INFO MENU* 」
 │
 ├ *${prefix}ping*
@@ -749,7 +751,7 @@ if (!isGroup) return reply(mess.only.group)
 					break
 
 
-case 'delsesittt':
+case 'resetgame':
 if (isBanned) return reply(mess.only.benned)    
 
 if (!isGroup) return reply(mess.only.group)
