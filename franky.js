@@ -848,7 +848,13 @@ function formatDate(n, locale = 'id') {
   })
 }
 break
-
+case 'get':
+		if(!q) return reply('linknya?')
+            fetch(`${args[0]}`).then(res => res.text())  
+            .then(bu =>{
+            reply(bu)
+            })   
+					
 case 'ping':
 let totalchat = await frnky.chats.all()
 				let i = []
