@@ -697,10 +697,11 @@ men =
 ├ *${prefix}tomp3*
 ├ *${prefix}pinterest*
 ├ *${prefix}ig*
-├ *${prefix}twitter*
+├ *${prefix}twitter* eror
 ├ *${prefix}mediafire*
-├ *${prefix}fbdl*
+├ *${prefix}fbdl* eror
 ├ *${prefix}fontdown*
+├ *${prefix}otakudesu*
 ├ *${prefix}yts*
 ├「 *GAME MENU* 」
 │
