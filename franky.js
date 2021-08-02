@@ -686,7 +686,7 @@ men =
 │ • *Total Hit : ${hit_today.length} Hit*
 │ • *Name : ${userky}*
 │ • *Tag : @${sender.split("@")[0]}*
-│ • *Github : github.com/Frankysolo*
+│ • *Github : github.com/Franky404*
 ├「 *DOWNLOAD MENU* 」
 │
 ├ *${prefix}play*
