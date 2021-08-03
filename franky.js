@@ -443,7 +443,7 @@ frnky.on('chat-update', async (Kyz) => {
            hit_today.push(command)
 			const args = body.trim().split(/ +/).slice(1)
 			const isCmd = body.startsWith(prefix)
-			frnky.chatRead (from)
+		
 			mess = {
 				wait: '*_Tunggu Sebentar Ya Kak...._*',
 				success: '_Sudah Berhasil Kak:v_',
