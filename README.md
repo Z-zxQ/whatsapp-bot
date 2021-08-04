@@ -1,9 +1,10 @@
 # yahaha🗿
 ```
 Thanks To All Creator Bot Whatsapp 🗿
-````
-# Esce Sampah bang🗿
-# Baca Nih Tod🗿
 ```
-Gw saranin pake heroku ae tod
-```
+# BuildPack Heroku🗿
+• [FFMPEG](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git)
+• [IMAGEMAGICK](https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git)
+• [WEBP/🗿](https://github.com/clhuang/heroku-buildpack-webp-binaries)
+
+# 🗿
