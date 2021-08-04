@@ -1,7 +1,7 @@
 {
   "name": "KY-BOTZ",
   "version": "1.2.0",
-  "description": "Have Fun",
+  "description": "🗿🗿🗿",
   "main": "franky.js",
   "directories": {
     "lib": "lib"
@@ -16,7 +16,7 @@
   ],
   "author": "Frankysolo",
   "dependencies": {
-    "@adiwajshing/baileys": "^3.5.0",
+    "@adiwajshing/baileys": "github:adiwajshing/baileys",
     "async": "^2.4.1",
     "axios": "^0.21.0",
     "base64-img": "^1.0.4",
@@ -50,10 +50,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/Frankysolo/bot.git"
+    "url": "🗿"
   },
   "bugs": {
-    "url": "https://github.com/Frankysolo/bot/issues"
+    "url": "🗿"
   },
-  "homepage": "https://github.com/Frankysolo/bot#readme"
+  "homepage": "🗿"
 }
