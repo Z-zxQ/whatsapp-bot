@@ -190,7 +190,7 @@ const cheerio = require('cheerio')
 const ffmpeg = require('fluent-ffmpeg')
 const imgbb = require('imgbb-uploader')
 const voting = JSON.parse(fs.readFileSync('./database/voting.json'))
-const { addVote, delVote } = require('./database/vote')
+const { addVote, delVote } = require('./database/vote.js')
 const a = '```'
 ky_ttt = []
 tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
@@ -447,7 +447,7 @@ frnky.on('chat-update', async (Kyz) => {
         // https://github.com/xdevteam/
 if(isGroup && !isVote) {
         if (budy.toLowerCase() === 'vote'){
-        let vote = JSON.parse(fs.readFileSync(`./database/${from}.json`))
+        let vote = JSON.parse(fs.readFileSync(`./database/vote/${from}.json`))
         let _votes = JSON.parse(fs.readFileSync(`./database/vote/${from}.json`))  
         let fil = vote.map(v => v.participant)
         let id_vote = sender ? sender : '6283183586629@s.whatsapp.net'
@@ -458,7 +458,7 @@ if(isGroup && !isVote) {
             participant: id_vote,
             voting: '✅'
         })
-        fs.writeFileSync(`./database/${from}.json`,JSON.stringify(vote))
+        fs.writeFileSync(`./database/vote/${from}.json`,JSON.stringify(vote))
         let _p = []
         let _vote = '*Vote* '+ '@'+ _votes[0].votes.split('@')[0] + `\n\n*Alasan*: ${_votes[0].reason}\n*Jumlah Vote* : ${vote.length} Vote\n*Durasi* : ${_votes[0].durasi} Menit\n\n` 
         for(let i = 0; i < vote.length; i++) {
@@ -469,7 +469,7 @@ if(isGroup && !isVote) {
         mentions(_vote,_p,true)   
         }
         } else if (budy.toLowerCase() === 'devote'){
-        const vote = JSON.parse(fs.readFileSync(`./database/${from}.json`))
+        const vote = JSON.parse(fs.readFileSync(`./database/vote/${from}.json`))
         let _votes = JSON.parse(fs.readFileSync(`./database/vote/${from}.json`))  
         let fil = vote.map(v => v.participant)
         let id_vote = sender ? sender : '6283183586629@s.whatsapp.net'
@@ -480,7 +480,7 @@ if(isGroup && !isVote) {
             participant: id_vote,
             voting: '❌'
         })
-        fs.writeFileSync(`./database/${from}.json`,JSON.stringify(vote))
+        fs.writeFileSync(`./database/vote/${from}.json`,JSON.stringify(vote))
         let _p = []
         let _vote = '*Vote* '+ '@'+ _votes[0].votes.split('@')[0] + `\n\n*Alasan*: ${_votes[0].reason}\n*Jumlah Vote* : ${vote.length} Vote\n*Durasi* : ${_votes[0].durasi} Menit\n\n` 
         for(let i = 0; i < vote.length; i++) {
