@@ -677,7 +677,7 @@ men =
 ├ *${prefix}ig*
 ├ *${prefix}mediafire*
 ├ *${prefix}fontdown*
-├ *${prefix}otakudesu*
+├ *${prefix}lirik*
 ├ *${prefix}yts*
 ├「 *GAME MENU* 」
 │
