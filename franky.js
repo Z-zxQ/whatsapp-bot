@@ -703,7 +703,7 @@ case 'delvote':
             reply('Sukses Menghapus sesi Voting Di Grup Ini')
             break
     case 'voting':
-            if(!isGroupAdmins) return 
+            ////if(!isGroupAdmins) return 
             if(!isGroup) return reply(mess.only.group)
             if (isVote) return reply('Sesi Voting Sedang Berlangsung Di Grup Ini')
             if(!q) return reply('*Voting*\n\n'+ prefix+ 'voting @tag target | reason  | 1 (1 = 1 Menit)\nContoh : /voting @tag | alasan | waktu vote')
