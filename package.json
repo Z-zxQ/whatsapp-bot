@@ -47,6 +47,10 @@
     "yargs": "^17.0.1",
     "yt-search": "^2.8.0"
   },
+  "engines"{
+  "node":"16.x",
+  "npm":7.x"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",
