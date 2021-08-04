@@ -31,7 +31,7 @@ const addVote = async(_id,_value1,_value2,_value3,reply) => {
     let fals = vote.filter(a => a.voting == '❌')
     reply(`*Waktu Habis*\n\n*Hasil Akhir*\n✅ = ${tru.length}\n❌ = ${fals.length}`)
     fs.unlinkSync(`./database/vote/${_id}.json`)
-    fs.unlinkSync(`./database/${_id}.json`)
+    fs.unlinkSync(`./database/vote/${_id}.json`)
     fs.writeFileSync(`./database/voting.json`, JSON.stringify(voting)) 
     }, _value3 * 60 * 1000);
 }
