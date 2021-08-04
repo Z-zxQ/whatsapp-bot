@@ -1194,7 +1194,7 @@ case 'lirik':
                                 
 if (args.length < 1) return reply("Apa Yang Mau Di Cari? ")
 teks = body.slice(7)
-anu = await fetchJson(`https://franky397.herokuapp.com/api/music/liriklagu?query=${teks}&apikey=Franky`)
+anu = await fetchJson(`https://franky404.herokuapp.com/api/music/liriklagu?query=${teks}&apikey=Franky`)
 console.log(res)
 let lirik = `*Lirik Lagu :*
 
