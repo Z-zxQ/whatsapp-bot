@@ -14,7 +14,7 @@ const delVote = (_id) => {
 
 const addVote = async(_id,_value1,_value2,_value3,reply) => {
 	voting.push(_id)
-    fs.writeFileSync(`./database/${_id}.json`,'[]')
+    fs.writeFileSync(`./database/vote/${_id}.json`,'[]')
     fs.writeFileSync(`./database/vote/${_id}.json`,'[]')
     fs.writeFileSync('./database/voting.json', JSON.stringify(voting)) 
     await sleep(2000)
