@@ -269,7 +269,7 @@ frnky.on('qr', qr => {
 })
 frnky.on('credentials-updated', () => {
 	const authInfo = frnky.base64EncodedAuthInfo()
-	console.log(`FrankyGanz Update!`)
+	
 	fs.writeFileSync('./franky.json', JSON.stringify(authInfo, null, '\t'))
 	})
 fs.existsSync('./franky.json') && frnky.loadAuthInfo('./franky.json')
@@ -444,10 +444,10 @@ frnky.on('chat-update', async (Kyz) => {
 				(id == null || id == undefined || id == false) ? frnky.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : frnky.sendMessage(from, teks.trim(), extendedText, {quoted: Kyz, contextInfo: {"mentionedJid": memberr}})
 			}
 	// By X Dev Team
-        // https://github.com/xdevteam/
-if(isGroup && !isVote) {
+        // https://github.com/xdevteam404/
+        if(isGroup && !isVote) {
         if (budy.toLowerCase() === 'vote'){
-        let vote = JSON.parse(fs.readFileSync(`./database/vote/${from}.json`))
+        let vote = JSON.parse(fs.readFileSync(`./database/${from}.json`))
         let _votes = JSON.parse(fs.readFileSync(`./database/vote/${from}.json`))  
         let fil = vote.map(v => v.participant)
         let id_vote = sender ? sender : '6283183586629@s.whatsapp.net'
@@ -458,7 +458,7 @@ if(isGroup && !isVote) {
             participant: id_vote,
             voting: '✅'
         })
-        fs.writeFileSync(`./database/vote/${from}.json`,JSON.stringify(vote))
+        fs.writeFileSync(`./database/${from}.json`,JSON.stringify(vote))
         let _p = []
         let _vote = '*Vote* '+ '@'+ _votes[0].votes.split('@')[0] + `\n\n*Alasan*: ${_votes[0].reason}\n*Jumlah Vote* : ${vote.length} Vote\n*Durasi* : ${_votes[0].durasi} Menit\n\n` 
         for(let i = 0; i < vote.length; i++) {
@@ -469,7 +469,7 @@ if(isGroup && !isVote) {
         mentions(_vote,_p,true)   
         }
         } else if (budy.toLowerCase() === 'devote'){
-        const vote = JSON.parse(fs.readFileSync(`./database/vote/${from}.json`))
+        const vote = JSON.parse(fs.readFileSync(`./database/${from}.json`))
         let _votes = JSON.parse(fs.readFileSync(`./database/vote/${from}.json`))  
         let fil = vote.map(v => v.participant)
         let id_vote = sender ? sender : '6283183586629@s.whatsapp.net'
@@ -480,7 +480,7 @@ if(isGroup && !isVote) {
             participant: id_vote,
             voting: '❌'
         })
-        fs.writeFileSync(`./database/vote/${from}.json`,JSON.stringify(vote))
+        fs.writeFileSync(`./database/${from}.json`,JSON.stringify(vote))
         let _p = []
         let _vote = '*Vote* '+ '@'+ _votes[0].votes.split('@')[0] + `\n\n*Alasan*: ${_votes[0].reason}\n*Jumlah Vote* : ${vote.length} Vote\n*Durasi* : ${_votes[0].durasi} Menit\n\n` 
         for(let i = 0; i < vote.length; i++) {
