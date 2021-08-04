@@ -9,7 +9,7 @@ const delVote = (_id) => {
 	voting.splice(_id,0)
     fs.writeFileSync(`./database/voting.json`, JSON.stringify(voting))
     fs.unlinkSync(`./database/vote/${_id}.json`)
-    fs.unlinkSync(`./database/${_id}.json`)
+    fs.unlinkSync(`./database/vote/${_id}.json`)
 }
 
 const addVote = async(_id,_value1,_value2,_value3,reply) => {
@@ -26,7 +26,7 @@ const addVote = async(_id,_value1,_value2,_value3,reply) => {
     })  
     fs.writeFileSync(`./database/vote/${_id}.json`, JSON.stringify(votes)) 
     setTimeout(async function() {
-	let vote = JSON.parse(fs.readFileSync(`./database/${_id}.json`))
+	let vote = JSON.parse(fs.readFileSync(`./database/vote/${_id}.json`))
     let tru = vote.filter(a => a.voting == '✅')
     let fals = vote.filter(a => a.voting == '❌')
     reply(`*Waktu Habis*\n\n*Hasil Akhir*\n✅ = ${tru.length}\n❌ = ${fals.length}`)
