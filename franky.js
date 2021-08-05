@@ -1604,15 +1604,15 @@ case 'tourl':
             break
 
 /*********************************************************/
-if ( button = 'DARE') {
+if ( button == 'DARE') {
 const mathdare = dare[Math.floor(Math.random() * (dare.length))]
  reply(`Dare\n\n${mathdare}`)
 }
-if ( button = 'TRUTH') {
+if ( button == 'TRUTH') {
 const randomtruth = truth[Math.floor(Math.random() * truth.length)]
  reply(`Truth \n\n${randomtruth}`)
 }
-if ( button = 'NEXT') {
+if ( button == 'NEXT') {
 frnky.send3Button(from,'TRUTH OF DARE','Silahkan Di Pilih!','TRUTH','TRUTH','DARE','DARE','NEXT','NEXT')
 }
 default:
