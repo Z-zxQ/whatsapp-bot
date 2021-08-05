@@ -191,6 +191,8 @@ const ffmpeg = require('fluent-ffmpeg')
 const imgbb = require('imgbb-uploader')
 const voting = JSON.parse(fs.readFileSync('./database/voting.json'))
 const { addVote, delVote } = require('./database/vote.js')
+const truth = JSON.parse(fs.readFileSync('./database/truth.json'))
+const dare = JSON.parse(fs.readFileSync('./database/dare.json'))
 const a = '```'
 ky_ttt = []
 tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
@@ -375,6 +377,7 @@ frnky.on('chat-update', async (Kyz) => {
 		const prefix = /^[°•π÷×¶∆£¢€¥®™✓=|~zZ+×_*!#$%^&./\\©^]/.test(cmod) ? cmod.match(/^[°•π÷×¶∆£¢€¥®™✓=|~zZ+×_*!#$,|`÷?;:%abcdefghijklmnopqrstuvwxyz%^&./\\©^]/gi) : '-'
 			body = (type === 'conversation' && Kyz.message.conversation.startsWith(prefix)) ? Kyz.message.conversation : (type == 'imageMessage') && Kyz.message.imageMessage.caption.startsWith(prefix) ? Kyz.message.imageMessage.caption : (type == 'videoMessage') && Kyz.message.videoMessage.caption.startsWith(prefix) ? Kyz.message.videoMessage.caption : (type == 'extendedTextMessage') && Kyz.message.extendedTextMessage.text.startsWith(prefix) ? Kyz.message.extendedTextMessage.text : ''
 			budy = (type === 'conversation') ? Kyz.message.conversation : (type === 'extendedTextMessage') ? Kyz.message.extendedTextMessage.text : ''
+                        button = (type == 'buttonsResponseMessage') ? Kyz.message.buttonsResponseMessage.selectedDisplayText : ''
 			const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
            hit_today.push(command)
 			const args = body.trim().split(/ +/).slice(1)
@@ -717,6 +720,12 @@ case 'delvote':
             addVote(from,split[1],split[0],split[2],reply)
             }
             break
+
+case 'tod':
+case 'dare':
+case 'truth':
+frnky.send3Button(from,'TRUTH OF DARE','Silahkan Di Pilih!','TRUTH','TRUTH','DARE','DARE','NEXT','NEXT')
+break
 case 'suit':
                     if (!q) return reply(`Kirim perintah ${prefix}suit [pilihan]\nContoh: ${prefix}suit gunting`)
                         if (!q.match(/batu|gunting|kertas/)) return reply(`Format salah!`)
@@ -1594,11 +1603,21 @@ case 'tourl':
             break
 
 /*********************************************************/
-
+if ( button = 'DARE') {
+const mathdare = dare[Math.floor(Math.random() * (dare.length))]
+ reply(`Dare\n\n${mathdare}`)
+}
+if ( button = 'TRUTH') {
+const randomtruth = truth[Math.floor(Math.random() * truth.length)]
+ reply(`Truth \n\n${randomtruth}`)
+}
+if ( button = 'NEXT') {
+frnky.send3Button(from,'TRUTH OF DARE','Silahkan Di Pilih!','TRUTH','TRUTH','DARE','DARE','NEXT','NEXT')
+}
 default:
 if (fs.existsSync(`./tmp/${from}.json`)) {
 	gelutSkuy = setGelud(`${from}`)
-	if (sender == `${gelutSkuy.Y}@s.whatsapp.net` && budy.toLowerCase() == 'y') {
+	if (sender == `${gelutSkuy.Y}@]s.whatsapp.net` && budy.toLowerCase() == 'y') {
 		if (gelutSkuy.status) return reply(`Game telah dimulai sebelumnya!`)
 		gelutSkuy.status = true
 		rand0m = [ gelutSkuy.Z, gelutSkuy.Y ]
