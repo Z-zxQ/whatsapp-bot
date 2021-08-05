@@ -687,6 +687,7 @@ men =
 ├ *${prefix}tictactoe*
 ├ *${prefix}resetgame*
 ├ *${prefix}suit*
+├ *${prefix}tod*
 ├「 *VOTING* 」
 │
 ├ *${prefix}voting*
