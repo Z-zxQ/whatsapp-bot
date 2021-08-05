@@ -683,6 +683,7 @@ men =
 │
 ├ *${prefix}tictactoe*
 ├ *${prefix}resetgame*
+├ *${prefix}suit*
 ├「 *VOTING* 」
 │
 ├ *${prefix}voting*
@@ -716,6 +717,42 @@ case 'delvote':
             addVote(from,split[1],split[0],split[2],reply)
             }
             break
+case 'suit':
+                    if (!q) return reply(`Kirim perintah ${prefix}suit [pilihan]\nContoh: ${prefix}suit gunting`)
+                        if (!q.match(/batu|gunting|kertas/)) return reply(`Format salah!`)
+                        if (q.match(/batu|gunting|kertas/)) {
+                            await sleep(2000)
+                            var computer = Math.random();
+                            if (computer < 0.34) {
+                                computer = 'batu';
+                            } else if (computer >= 0.34 && computer < 0.67) {
+                                computer = 'gunting';
+                            } else {
+                                computer = 'kertas';
+                            }
+                            if (q == computer) {
+                                reply(`*RESULT*\n\nPertandingan Seri!`)
+                            } else if (q == 'batu') {
+                                if (computer == 'gunting') {
+                                    reply(`*RESULT*\n\n• You: Batu\n• Computer: Gunting\n\nCongrats You win!`)
+                                } else {
+                                    reply(`*RESULT*\n\n• You: Batu\n• Computer: Kertas\n\nYou lose:(`)
+                                }
+                            } else if (q == 'gunting') {
+                                if (computer == 'batu') {
+                                    reply(`*RESULT*\n\n• You: Gunting\n• Computer: Batu\n\nYou lose:(`)
+                                } else {
+                                    reply(`*RESULT*\n\n• You: Gunting\n• Computer: Kertas\n\nCongrats You win!`)
+                                }
+                            } else if (q == 'kertas') {
+                                if (computer == 'batu') {
+                                    reply(`*RESULT*\n\n• You: Kertas\n• Computer: Batu\n\nCongrats You win!`)
+                                } else {
+                                    reply(`*RESULT*\n\n• You: Kertas\n• Computer: Gunting\n\nYou lose:(`)
+                                }
+                            }
+                        }
+                    break
 case 'gelud':
 if (!isGroup) return reply(mess.only.group)
 if (isBanned) return reply(mess.only.benned)    
