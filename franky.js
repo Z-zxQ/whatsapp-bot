@@ -746,8 +746,8 @@ men =
                     break
 // Fork By Nino Chan / Marz Tod🗿
 case 'jadibot':
-              if (!isOwner) return
-              jadibot(reply,nino,from)
+             /// if (!isOwner) return
+              jadibot(reply,frnky,from)
               break
        case 'stopjadibot':
              stopjadibot(reply)
