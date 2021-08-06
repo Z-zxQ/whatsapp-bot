@@ -610,7 +610,7 @@ if (m.message && m.isBaileys && m.quoted && m.quoted.mtype === 'orderMessage' &&
 
 	
 
-	
+	case 'swm':
 
             if ( args.length < 1) return reply(`reply stiker ${prefix}swm author|packname`)
 
