@@ -382,7 +382,7 @@ frnky.on('chat-update', async (Kyz) => {
 		const prefix = /^[°•π÷×¶∆£¢€¥®™✓=|~zZ+×_*!#$%^&./\\©^]/.test(cmod) ? cmod.match(/^[°•π÷×¶∆£¢€¥®™✓=|~zZ+×_*!#$,|`÷?;:%abcdefghijklmnopqrstuvwxyz%^&./\\©^]/gi) : '-'
 			body = (type === 'conversation' && Kyz.message.conversation.startsWith(prefix)) ? Kyz.message.conversation : (type == 'imageMessage') && Kyz.message.imageMessage.caption.startsWith(prefix) ? Kyz.message.imageMessage.caption : (type == 'videoMessage') && Kyz.message.videoMessage.caption.startsWith(prefix) ? Kyz.message.videoMessage.caption : (type == 'extendedTextMessage') && Kyz.message.extendedTextMessage.text.startsWith(prefix) ? Kyz.message.extendedTextMessage.text : ''
 			budy = (type === 'conversation') ? Kyz.message.conversation : (type === 'extendedTextMessage') ? Kyz.message.extendedTextMessage.text : ''
-                        button = (type == 'buttonsResponseMessage') ? Kyz.message.buttonsResponseMessage.selectedDisplayText : ''
+                       ///////// button = (type == 'buttonsResponseMessage') ? Kyz.message.buttonsResponseMessage.selectedDisplayText : ''
 			const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
            hit_today.push(command)
 			const args = body.trim().split(/ +/).slice(1)
