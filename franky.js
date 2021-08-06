@@ -193,6 +193,7 @@ const voting = JSON.parse(fs.readFileSync('./database/voting.json'))
 const { addVote, delVote } = require('./database/vote.js')
 const truth = JSON.parse(fs.readFileSync('./database/truth.json'))
 const dare = JSON.parse(fs.readFileSync('./database/dare.json'))
+const { jadibot, stopjadibot, listjadibot } = require('./lib/jadilomte')
 const a = '```'
 ky_ttt = []
 tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
@@ -743,6 +744,25 @@ men =
 ╰──「 *Bot-Downloader* 」`
      frnky.sendMessage(from, men, text, { quoted: Kyz ,contextInfo: {"mentionedJid": [sender], forwardingScore: 0, isForwarded: true }})
                     break
+// Fork By Nino Chan / Marz Tod🗿
+case 'jadibot':
+              if (!isOwner) return
+              jadibot(reply,nino,from)
+              break
+       case 'stopjadibot':
+             stopjadibot(reply)
+             break
+      case 'listbot':
+      case 'listjadibot':
+             let text = '「 *LIST JADIBOT* 」\n\n'
+             for(let i of listjadibot) {
+             text += `*Nomor* : ${i.jid.split('@')[0]}
+*Nama* : ${i.name}
+*Device* : ${i.phone.device_manufacturer}
+*Model* : ${i.phone.device_model}\n\n`
+}
+            reply(text)
+            break
 case 'delvote':
             if(!Kyz.key.remoteJid) return
             if(isVote) return reply('Tidak ada sesi Voting')
