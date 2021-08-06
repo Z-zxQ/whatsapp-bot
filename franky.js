@@ -1645,7 +1645,7 @@ case 'tourl':
             break
 
 /*********************************************************/
-if (budy.startsWith('https://vt.')){
+if (budy.startsWith('https://vt.')) return
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
 res = await TiktokDownloader(`${budy}`).catch(e => {
@@ -1653,8 +1653,7 @@ reply('_[ ! ] Server Sedang Error_')
 })
 console.log(res)
 sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
-}
-if (budy.startsWith('https://vm.')){
+if (budy.startsWith('https://vm.')) return
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
 res = await TiktokDownloader(`${budy}`).catch(e => {
@@ -1662,8 +1661,7 @@ reply('_[ ! ] Server Sedang Error_')
 })
 console.log(res)
 sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
-}
-if (budy.startsWith('https://t.')){
+if (budy.startsWith('https://t.')) return
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
 res = await TiktokDownloader(`${budy}`).catch(e => {
@@ -1671,7 +1669,6 @@ reply('_[ ! ] Server Sedang Error_')
 })
 console.log(res)
 sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
-}
 if ( button == 'DARE') {
 const mathdare = dare[Math.floor(Math.random() * (dare.length))]
  reply(`Dare\n\n${mathdare}`)
