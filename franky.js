@@ -1645,6 +1645,24 @@ case 'tourl':
             break
 
 /*********************************************************/
+if (budy.toLowerCase() === 'https://vt'){
+var { TiktokDownloader } = require('./lib/tiktokdl')
+reply(mess.wait)
+res = await TiktokDownloader(`${budy}`).catch(e => {
+reply('_[ ! ] Server Sedang Error_')
+})
+console.log(res)
+sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
+}
+if (budy.toLowerCase() === 'https://vm'){
+var { TiktokDownloader } = require('./lib/tiktokdl')
+reply(mess.wait)
+res = await TiktokDownloader(`${budy}`).catch(e => {
+reply('_[ ! ] Server Sedang Error_')
+})
+console.log(res)
+sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
+}
 if ( button == 'DARE') {
 const mathdare = dare[Math.floor(Math.random() * (dare.length))]
  reply(`Dare\n\n${mathdare}`)
