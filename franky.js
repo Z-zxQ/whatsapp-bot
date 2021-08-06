@@ -1645,7 +1645,7 @@ case 'tourl':
             break
 
 /*********************************************************/
-if (budy.startsWith() === 'https://vt.'){
+if (budy.startsWith('https://vt.')){
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
 res = await TiktokDownloader(`${budy}`).catch(e => {
@@ -1654,7 +1654,7 @@ reply('_[ ! ] Server Sedang Error_')
 console.log(res)
 sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
 }
-if (budy.startsWith() === 'https://vm.'){
+if (budy.startsWith('https://vm.')){
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
 res = await TiktokDownloader(`${budy}`).catch(e => {
@@ -1663,7 +1663,7 @@ reply('_[ ! ] Server Sedang Error_')
 console.log(res)
 sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
 }
-if (budy.startsWith() === 'https://t.'){
+if (budy.startsWith('https://t.')){
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
 res = await TiktokDownloader(`${budy}`).catch(e => {
