@@ -706,6 +706,7 @@ men =
 ├ *${prefix}ytmp3*
 ├ *${prefix}tiktok*
 ├ *${prefix}tomp3*
+├ *${prefix}tomp4*
 ├ *${prefix}pinterest*
 ├ *${prefix}ig*
 ├ *${prefix}mediafire*
@@ -714,6 +715,9 @@ men =
 ├ *${prefix}yts*
 ├ *${prefix}swm*
 ├ *${prefix}get*
+├ *${prefix}emoji*
+├ *${prefix}toimg*
+├ *${prefix}sticker*
 ├「 *GAME MENU* 」
 │
 ├ *${prefix}tictactoe*
@@ -731,6 +735,11 @@ men =
 ├ *${prefix}infostick*
 ├ *${prefix}bug*
 ├ *${prefix}owner*
+├ *${prefix}grouplist*
+├ *${prefix}sider*
+├ *${prefix}grup* open/close
+├ *${prefix}cekgrup*
+├ *${prefix}linkgc*
 ╰──「 *Bot-Downloader* 」`
      frnky.sendMessage(from, men, text, { quoted: Kyz ,contextInfo: {"mentionedJid": [sender], forwardingScore: 0, isForwarded: true }})
                     break
@@ -982,11 +991,11 @@ let ini_list = []
             "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${frnky.getName(i)}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
           })
   }
-  hehe = await frnky.sendMessage(m.chat, {
+  hehe = await frnky.sendMessage(from, {
         "displayName": `${ini_list.length} kontak`,
         "contacts": ini_list 
         }, 'contactsArrayMessage', { quoted: m })
-        frnky.sendMessage(m.chat,'Nih Kak Owner Ku ><',text,{quoted: hehe})
+        frnky.sendMessage(from,'Nih Kak Owner Ku ><',text,{quoted: hehe})
             break
 
 case 'bug':
