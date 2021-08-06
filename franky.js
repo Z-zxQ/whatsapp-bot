@@ -125,7 +125,7 @@ const {
   dafontSearch
 } = require('./lib/dafont')
 const {
-	Textpro,
+     Textpro,
      Textpro2
 } = require('./lib/scraper')
 const { 
@@ -276,7 +276,7 @@ frnky.on('credentials-updated', () => {
 	})
 fs.existsSync('./franky.json') && frnky.loadAuthInfo('./franky.json')
 frnky.connect();
-// wa connect
+
 
 
 frnky.on('group-update', async (anu) => {
