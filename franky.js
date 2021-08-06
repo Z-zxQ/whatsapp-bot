@@ -747,8 +747,12 @@ men =
 ├ *${prefix}cekgrup*
 ├ *${prefix}linkgc*
 ╰──「 *Bot-Downloader* 」`
-     frnky.sendMessage(from, men, text, { quoted: Kyz ,contextInfo: {"mentionedJid": [sender], forwardingScore: 0, isForwarded: true }})
+     frnky.sendMessage(from, men, MessageType.text, { quoted: Kyz ,contextInfo: {"mentionedJid": [sender], forwardingScore: 0, isForwarded: true }})
                     break
+
+
+
+
 // Fork By Nino Chan / Marz Tod🗿
 case 'jadibot':
              /// if (!isOwner) return
