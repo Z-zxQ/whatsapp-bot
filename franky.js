@@ -707,6 +707,8 @@ men =
 ├ *${prefix}fontdown*
 ├ *${prefix}lirik*
 ├ *${prefix}yts*
+├ *${prefix}swm*
+├ *${prefix}get*
 ├「 *GAME MENU* 」
 │
 ├ *${prefix}tictactoe*
@@ -926,7 +928,7 @@ case 'get':
             .then(bu =>{
             reply(bu)
             })   
-					
+	 break		
 case 'ping':
 let totalchat = await frnky.chats.all()
 				let i = []
