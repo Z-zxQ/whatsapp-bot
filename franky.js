@@ -604,6 +604,31 @@ if (m.message && m.isBaileys && m.quoted && m.quoted.mtype === 'orderMessage' &&
             if (isGroup && isCmd) console.log(color(time, "white"), color("[ GROUP ]", "aqua"), color(budy, "white"), "from", color(sender.split('@')[0], "yellow"), "in", color(groupName, "yellow"))
             
 			switch(command) {
+					
+
+	
+
+	
+
+	
+
+            if ( args.length < 1) return reply(`reply stiker ${prefix}swm author|packname`)
+
+            encmedia = JSON.parse(JSON.stringify(Kyz).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+
+		    media = await frnky.downloadAndSaveMediaMessage(encmedia)
+
+            anu = args.join(' ').split('|')
+
+            satu = anu[0] !== '' ? anu[0] : `${args[0]}`
+
+            dua = typeof anu[1] !== 'undefined' ? anu[1] : `${args[0]}`
+
+            require('./lib/fetcher.js').createExif(satu, dua)
+
+	        require('./lib/fetcher.js').modStick(media, frnky, Kyz, from)
+
+			break
 case 'sider': 
                 if (!isGroup) return reply(mess.only.group)
                 if (!isQuoted) return reply(`Reply pesan dari bot`)
