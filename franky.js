@@ -262,21 +262,26 @@ function convertBalanceToString(angka) {
 	for (var i = 0; i < angkarev.length; i++) if (i % 3 == 0) balancenyeini += angkarev.substr(i, 3) + '.';
 	return '' + balancenyeini.split('', balancenyeini.length - 1).reverse().join('');
 }
-
 async function starts() {
 	const frnky = new WAConnection()
-	frnky.version = [2, 2119, 6]
-frnky.on('qr', qr => {
-	console.log(` SCAN QR`)
-})
-frnky.on('credentials-updated', () => {
-	const authInfo = frnky.base64EncodedAuthInfo()
-	
-	fs.writeFileSync('./franky.json', JSON.stringify(authInfo, null, '\t'))
+	frnky.logger.level = 'warn'
+        frnky.version = [2, 2119, 6]
+	console.log('>', '[',color('INFO','blue'),']','Starting Bot...')
+  console.log('>', '[',color('INFO','blue'),']','Configure Connection...')
+  console.log('>', '[',color('INFO','blue'),']','Configure Success, Connecting...')
+	frnky.on('qr', () => {
+	console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan the qr code above'))
 	})
-fs.existsSync('./franky.json') && frnky.loadAuthInfo('./franky.json')
-frnky.connect();
 
+	fs.existsSync('./franky.json') && frnky.loadAuthInfo('./franky.json')
+	frnky.on('connecting', () => {
+	start('2', 'Connecting...')
+	})
+	frnky.on('open', () => {
+	success('2', 'Connected')
+	}) 
+	await frnky.connect({timeoutMs: 30*1000})
+  fs.writeFileSync('./franky.json', JSON.stringify(frnky.base64EncodedAuthInfo(), null, '\t'))
 
 
 frnky.on('group-update', async (anu) => {
