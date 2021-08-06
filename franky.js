@@ -725,6 +725,11 @@ men =
 ├ *${prefix}resetgame*
 ├ *${prefix}suit*
 ├ *${prefix}tod*
+├「 *JADI-BOT* 」
+│
+├ *${prefix}jadibot*
+├ *${prefix}stopjadibot*
+├ *${prefix}listjadibot*
 ├「 *VOTING* 」
 │
 ├ *${prefix}voting*
