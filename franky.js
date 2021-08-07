@@ -722,11 +722,12 @@ men =
 ├「 *GAME MENU* 」
 │
 ├ *${prefix}tictactoe*
-├ *${prefix}resetgame*
+├ *${prefix}deltt*
 ├ *${prefix}suit*
-├ *${prefix}tod*
+├ *${prefix}gelud*
+├ *${prefix}delgelud*
 ├「 *JADI-BOT* 」
-│
+│ • Owner only!
 ├ *${prefix}jadibot*
 ├ *${prefix}stopjadibot*
 ├ *${prefix}listjadibot*
@@ -756,7 +757,7 @@ men =
 
 // Fork By Nino Chan / Marz Tod🗿
 case 'jadibot':
-             /// if (!isOwner) return
+             if (!isOwner) return 
               jadibot(reply,frnky,from)
               break
        case 'stopjadibot':
@@ -856,7 +857,7 @@ if (isBanned) return reply(mess.only.benned)
 					frnky.sendMessage(from, starGame, text, {quoted: Kyz, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
 					break
 					
-					case 'delsesigelud':
+					case 'delgelud':
 if (isBanned) return reply(mess.only.benned)    
 
 if (!isGroup) return reply(mess.only.group)
@@ -869,7 +870,7 @@ if (!isGroup) return reply(mess.only.group)
 					break
 
 
-case 'resetgame':
+case 'deltt':
 if (isBanned) return reply(mess.only.benned)    
 
 if (!isGroup) return reply(mess.only.group)
@@ -900,7 +901,7 @@ frnky.sendMessage(from,
 [@${player2.split('@')[0]}] Menantang anda untuk menjadi lawan Game🔥
 Ketik Y/N untuk menerima atau menolak permainan
 
-Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contextInfo: {mentionedJid: [player2]}})
+Ket : Ketik /deltt , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contextInfo: {mentionedJid: [player2]}})
 break
 
 case 'infostick':
@@ -1646,7 +1647,7 @@ ${v.videoCount} video
 `.trim()
     }
   }).filter(v => v).join('\n========================\n')
-  m.reply(wktod)
+  reply(wktod)
   break
 case 'fontsearch':
 case 'dafonts':
@@ -1703,42 +1704,7 @@ case 'tourl':
             
             break
 
-/*********************************************************/
-if (budy.startsWith('https://vt.')) return
-var { TiktokDownloader } = require('./lib/tiktokdl')
-reply(mess.wait)
-res = await TiktokDownloader(`${budy}`).catch(e => {
-reply('_[ ! ] Server Sedang Error_')
-})
-console.log(res)
-sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
-if (budy.startsWith('https://vm.')) return
-var { TiktokDownloader } = require('./lib/tiktokdl')
-reply(mess.wait)
-res = await TiktokDownloader(`${budy}`).catch(e => {
-reply('_[ ! ] Server Sedang Error_')
-})
-console.log(res)
-sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
-if (budy.startsWith('https://t.')) return
-var { TiktokDownloader } = require('./lib/tiktokdl')
-reply(mess.wait)
-res = await TiktokDownloader(`${budy}`).catch(e => {
-reply('_[ ! ] Server Sedang Error_')
-})
-console.log(res)
-sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
-if ( button == 'DARE') {
-const mathdare = dare[Math.floor(Math.random() * (dare.length))]
- reply(`Dare\n\n${mathdare}`)
-}
-if ( button == 'TRUTH') {
-const randomtruth = truth[Math.floor(Math.random() * truth.length)]
- reply(`Truth \n\n${randomtruth}`)
-}
-if ( button == 'NEXT') {
-frnky.send3Button(from,'TRUTH OF DARE','Silahkan Di Pilih!','TRUTH','TRUTH','DARE','DARE','NEXT','NEXT')
-}
+/*******************************************************
 default:
 if (fs.existsSync(`./tmp/${from}.json`)) {
 	gelutSkuy = setGelud(`${from}`)
