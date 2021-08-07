@@ -1,4 +1,4 @@
-# yahaha🗿
+# Thanks🗿
 ```
 Thanks To All Creator Bot Whatsapp 🗿
 ```
