@@ -1,87 +1,29 @@
 const {
   WAConnection: _WAConnection,
-  MessageType,
   Presence, 
   MessageOptions,
   Mimetype,
   WALocationMessage,
-  ProxyAgent,
   GroupSettingChange,
   ChatModification,
-  mentionedJid,
-  processTime
+  MessageType
 } = require('@adiwajshing/baileys')
 /*
-*           CASE CASINO AMA SUIT
-*.          NIH SU :V
-*.          gw males pasang ke case 
+*           
+*.          
+*.     
 *.       Repo : github.com/MrG3P5
-*.         case 'suit':
-                    if (!isRegistered) return await frnky.reply(from, `Kamu belum terdaftar di database!, Silakan register dengan cara ${prefix}verify`, id)
-                    if (isLimitCoin(serial)) return frnky.reply(from, `Sepertinya coinmu telah habis, Silahkan beli di ${prefix}shopmenu`, id)
-                    if (!q) return await frnky.reply(from, `Kirim perintah ${prefix}suit [pilihan]\nContoh: ${prefix}suit gunting`, id)
-                    const hargasuit = 5000
-                    if (checkATMuser(serial) <= hargasuit) return frnky.reply(from, `Sepertinya saldomu tidak cukup, untuk bermain game ini harus ada Rp. 5.000+, silahkan cek dengan cara ${prefix}cekatm`, id)
-                    if (checkATMuser(serial) >= hargasuit) {
-                        if (!q.match(/batu|gunting|kertas/)) return frnky.reply(from, `Format salah`, id)
-                        if (q.match(/batu|gunting|kertas/)) {
-                            await limitAddCoin(serial)
-                            confirmATM(serial, hargasuit)
-                            await sleeps(3000)
-
-                            var computer = Math.random();
-
-                            const hadiahnye = Math.floor(Math.random() * 10000) + 1;
-                            const hadiahtostr = convertBalanceToString(hadiahnye)
-                            const balikin = hargasuit * 1
-
-                            if (computer < 0.34) {
-                                computer = 'batu';
-                            } else if (computer >= 0.34 && computer < 0.67) {
-                                computer = 'gunting';
-                            } else {
-                                computer = 'kertas';
-                            }
-
-                            if (q == computer) {
-                                frnky.reply(from, `Pertandingan Seri!\nSaldomu dikembalikan Rp ${convertBalanceToString(hargasuit)}`, id)
-                                addSaldo(serial, balikin)
-                            } else if (q == 'batu') {
-                                if (computer == 'gunting') {
-                                    frnky.reply(from, `*RESULT*\n\n• You: Batu\n• Computer: Gunting\n\nCongrats You win!, SALDO +Rp ${hadiahtostr}`, id)
-                                    addSaldo(serial, hadiahnye)
-                                } else {
-                                    frnky.reply(from, `*RESULT*\n\n• You: Batu\n• Computer: Kertas\n\nYou lose:(`, id)
-                                }
-                            } else if (q == 'gunting') {
-                                if (computer == 'batu') {
-                                    frnky.reply(from, `*RESULT*\n\n• You: Gunting\n• Computer: Batu\n\nYou lose:(`, id)
-                                } else {
-                                    frnky.reply(from, `*RESULT*\n\n• You: Gunting\n• Computer: Kertas\n\nCongrats You win!, SALDO +Rp ${hadiahtostr}`, id)
-                                    addSaldo(serial, hadiahnye)
-                                }
-                            } else if (q == 'kertas') {
-                                if (computer == 'batu') {
-                                    frnky.reply(from, `*RESULT*\n\n• You: Kertas\n• Computer: Batu\n\nCongrats You win!, SALDO +Rp ${hadiahtostr}`, id)
-                                    addSaldo(serial, hadiahnye)
-                                } else {
-                                    frnky.reply(from, `*RESULT*\n\n• You: Kertas\n• Computer: Gunting\n\nYou lose:(`, id)
-                                }
-                            }
-                        }
-                    }
-                    break
+*.         
                 case 'casino':
-                    if (!isRegistered) return await frnky.reply(from, `Kamu belum terdaftar di database!, Silakan register dengan cara ${prefix}verify`, id)
-                    if (isLimitCoin(serial)) return frnky.reply(from, `Sepertinya coinmu habis, Silahkan beli di ${prefix}shopmenu`, id)
-                    if (!q) return await frnky.reply(from, `Format salah!\n\nKirim perintah ${prefix}casino jumlah\nContoh: ${prefix}casino 5000`, id)
+                    
+                    if (!q) return await frnky.reply(from, `Format salah!\n\nKirim perintah ${prefix}casino jumlah\nContoh: ${prefix}casino 5000`)
                     var digits_only = string => [...string].every(c => '0123456789'.includes(c));
                     if (digits_only(q) == false) return await frnky.reply(from, `Only Number!`, id)
                     if (digits_only(q) == true) {
                         const betcasino = Math.floor(q)
                         const maximalcsn = 100001
-                        if (betcasino >= maximalcsn) return frnky.reply(from, `Maximal 100k`, id)
-                        if (checkATMuser(serial) <= betcasino) return frnky.reply(from, `*IND*\n• Sepertinya saldomu tidak cukup untuk taruhan Rp. ${convertBalanceToString(q)}, Silahkan cek dengan cara ${prefix}cekatm\n\n*ENG*\n• It looks like your balance is not enough for the bet Rp. ${convertBalanceToString(q)}, Please check your balance type ${prefix}cekatm`, id)
+                        if (betcasino >= maximalcsn) return frnky.reply(from, `Maximal 100k`)
+                        if (checkATMuser(serial) <= betcasino) return frnky.reply(from, `*IND*\n• Sepertinya saldomu tidak cukup untuk taruhan Rp. ${convertBalanceToString(q)}, Silahkan cek dengan cara ${prefix}cekatm\n\n*ENG*\n• It looks like your balance is not enough for the bet Rp. ${convertBalanceToString(q)}, Please check your balance type ${prefix}cekatm`)
                         if (checkATMuser(serial) >= betcasino) {
                             await limitAddCoin(serial)
                             confirmATM(serial, betcasino)
@@ -90,12 +32,12 @@ const {
                             const thisyou = Math.floor(Math.random() * maxcasino) + 1;
                             const thiscomputer = Math.floor(Math.random() * maxcasino) + 1;
                             if (thisyou >= thiscomputer) {
-                                frnky.reply(from, `*RESULT*\n\n• You: ${thisyou}\n• Computer: ${thiscomputer}\n\nCongrats! You win and get Rp. ${convertBalanceToString(hadiahcsn)}`, id)
+                                frnky.reply(from, `*RESULT*\n\n• You: ${thisyou}\n• Computer: ${thiscomputer}\n\nCongrats! You win and get Rp. ${convertBalanceToString(hadiahcsn)}`)
                                 addSaldo(serial, hadiahcsn)
                             } else if (thisyou <= thiscomputer) {
-                                frnky.reply(from, `*RESULT*\n\n• You: ${thisyou}\n• Computer: ${thiscomputer}\n\nSorry! You lose:(`, id)
+                                frnky.reply(from, `*RESULT*\n\n• You: ${thisyou}\n• Computer: ${thiscomputer}\n\nSorry! You lose:(`)
                             } else if (thisyou === thiscomputer) {
-                                frnky.reply(form, `*RESULT*\n\n• You: ${thisyou}\n• Computer: ${thiscomputer}\n\nDraw!`, id)
+                                frnky.reply(from, `*RESULT*\n\n• You: ${thisyou}\n• Computer: ${thiscomputer}\n\nDraw!`)
                             }
                         }
                     }
@@ -124,10 +66,6 @@ const {
   dafontDown,
   dafontSearch
 } = require('./lib/dafont')
-const {
-     Textpro,
-     Textpro2
-} = require('./lib/scraper')
 const { 
      wait, 
      simih, 
@@ -155,14 +93,8 @@ const {
   mediafireDl
 } = require('./lib/mediafire')
 const {
-    lirikLagu
-} = require('./lib/lirik')
-const {
     Otakudesu
 } = require('./lib/otakudesu')
-const {
-    translate
-} = require('./lib/translate')
 const {
     pinterest
 } = require('./lib/pinterest')
@@ -195,6 +127,7 @@ const truth = JSON.parse(fs.readFileSync('./database/truth.json'))
 const dare = JSON.parse(fs.readFileSync('./database/dare.json'))
 const { jadibot, stopjadibot, listjadibot } = require('./lib/jadilomte')
 const a = '```'
+// By github.com/zobin33/
 ky_ttt = []
 tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
 prefix = ''
@@ -854,7 +787,7 @@ if (isBanned) return reply(mess.only.benned)
 • @${sender.replace("@s.whatsapp.net", "")} Menantang Bergelud
 [ ${args[0]} ] Ketik Y/N untuk menerima atau menolak permainan`
 
-					frnky.sendMessage(from, starGame, text, {quoted: Kyz, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
+					frnky.sendMessage(from, starGame, MessageType.text, {quoted: Kyz, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
 					break
 					
 					case 'delgelud':
@@ -1719,11 +1652,11 @@ if (fs.existsSync(`./tmp/${from}.json`)) {
 
 Diantara @${gelutSkuy.Z} & @${gelutSkuy.Y}
 • Pemenangnya adalah [ @${winR} ] `
-	   frnky.sendMessage(from, starGame, text, {quoted: Kyz, contextInfo: { mentionedJid: [winR + "@s.whatsapp.net", gelutSkuy.Z + "@s.whatsapp.net", gelutSkuy.Y + "@s.whatsapp.net",]}})
+	   frnky.sendMessage(from, starGame, MessageType.text, {quoted: Kyz, contextInfo: { mentionedJid: [winR + "@s.whatsapp.net", gelutSkuy.Z + "@s.whatsapp.net", gelutSkuy.Y + "@s.whatsapp.net",]}})
 		fs.unlinkSync("./tmp/" + from + ".json");
 	} else if (sender == `${gelutSkuy.Y}@s.whatsapp.net` &&  budy.toLowerCase() == 'n') {
 		frnky.sendMessage(from, `👑 Game Gelud Rejected 🤙🏻
-• @${gelutSkuy.Y} Menolak🤙🏻`, text, {quoted: Kyz, contextInfo: { mentionedJid: [gelutSkuy.Y + "@s.whatsapp.net"]}})
+• @${gelutSkuy.Y} Menolak🤙🏻`, MessageType.text, {quoted: Kyz, contextInfo: { mentionedJid: [gelutSkuy.Y + "@s.whatsapp.net"]}})
 		fs.unlinkSync("./tmp/" + from + ".json");
 	}
 }
