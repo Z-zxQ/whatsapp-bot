@@ -670,6 +670,7 @@ men =
 ├ *${prefix}delvote*
 ├「 *INFO MENU* 」
 │
+├ *${prefix}kirim*
 ├ *${prefix}ping*
 ├ *${prefix}wame*
 ├ *${prefix}q*
@@ -685,8 +686,12 @@ men =
      frnky.sendMessage(from, men, MessageType.text, { quoted: Kyz ,contextInfo: {"mentionedJid": [sender], forwardingScore: 0, isForwarded: true }})
                     break
 
-
-
+// Case By Franky🗿
+case 'kirim':
+if(!Kyz.quoted) return reply('reply chatnya!')
+if(!q) return reply('apa yg mau di kirim?') 
+sendMess(Kyz.quoted.sender , q)
+break
 
 // Fork By Nino Chan / Marz Tod🗿
 case 'jadibot':
