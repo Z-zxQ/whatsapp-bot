@@ -737,6 +737,7 @@ men =
 ├「 *INFO MENU* 」
 │
 ├ *${prefix}ping*
+├ *${prefix}wame*
 ├ *${prefix}q*
 ├ *${prefix}infostick*
 ├ *${prefix}bug*
