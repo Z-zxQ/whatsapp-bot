@@ -966,12 +966,41 @@ function formatDate(n, locale = 'id') {
 }
 break
 case 'get':
-		if(!q) return reply('linknya?')
-            fetch(`${args[0]}`).then(res => res.text())  
-            .then(bu =>{
-            reply(bu)
-            })   
-	 break		
+
+        case 'fetch': //ambil dari nuru
+
+               if (!/^https?:\/\//.test(q)) return reply('Awali *URL* dengan http:// atau https://')
+
+               res = await fetch(q)
+
+               if (res.headers.get('content-length') > 100 * 1024 * 1024 * 1024) {
+
+               delete res
+
+               throw `Content-Length: ${res.headers.get('content-length')}`
+
+}
+
+               if (!/text|json/.test(res.headers.get('content-type'))) return sendMediaURL(from, q)
+
+               txtx = await res.buffer()
+
+               try {
+
+               txtx = util.format(JSON.parse(txtx+''))
+
+               } catch (e) {
+
+               txtx = txtx + ''
+
+               } finally {
+
+               reply(txtx.slice(0, 65536) + '')
+
+}
+
+               break
+
 case 'ping':
 let totalchat = await frnky.chats.all()
 				let i = []
