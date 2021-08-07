@@ -775,7 +775,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (Kyz.message.extendedTextMessage.contextInfo.mentionedJid > 1) return reply('Hanya bisa dengan 1 orang')
 					if (!Kyz.message.extendedTextMessage.contextInfo.mentionedJid[0]) return
                      if (args.length === 0) return reply(`Tag Lawan Yang Ingin Diajak Bermain Game`)
-					if (fs.existsSync(`./tmp/${from}.json`)) return reply(`Sedang Ada Sesi, tidak dapat dijalankan secara bersamaan\nKetik *${prefix}delsesigelud*, untuk menghapus sesi`)
+					if (fs.existsSync(`./tmp/${from}.json`)) return reply(`Sedang Ada Sesi, tidak dapat dijalankan secara bersamaan\nKetik *${prefix}delgelud*, untuk menghapus sesi`)
 					
 					gelutSkuy = setGelud(`${from}`)
 					gelutSkuy.status = false
