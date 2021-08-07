@@ -1069,7 +1069,7 @@ if (isBanned) return reply(mess.only.benned)
               mentionedJid: [sender]
               }
               }
-              frnky.sendMessage(from, options, text, {quoted: Kyz})
+              frnky.sendMessage(from, options, MessagetType.text, {quoted: Kyz})
               break
 case 'linkgroup':
 case 'linkgc':
