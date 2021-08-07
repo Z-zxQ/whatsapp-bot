@@ -690,6 +690,7 @@ men =
 case 'kirim':
 if(!Kyz.quoted) return reply('reply chatnya!')
 if(!q) return reply('apa yg mau di kirim?') 
+reply('sukses mengirim pesan!')
 sendMess(Kyz.quoted.sender , q)
 break
 
