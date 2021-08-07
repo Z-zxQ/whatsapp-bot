@@ -698,14 +698,14 @@ case 'jadibot':
              break
       case 'listbot':
       case 'listjadibot':
-             let text = '「 *LIST JADIBOT* 」\n\n'
+             let jamdi = '「 *LIST JADIBOT* 」\n\n'
              for(let i of listjadibot) {
-             text += `*Nomor* : ${i.jid.split('@')[0]}
+             jamdi += `*Nomor* : ${i.jid.split('@')[0]}
 *Nama* : ${i.name}
 *Device* : ${i.phone.device_manufacturer}
 *Model* : ${i.phone.device_model}\n\n`
 }
-            reply(text)
+            reply(jamdi)
             break
 case 'delvote':
             if(!Kyz.key.remoteJid) return
