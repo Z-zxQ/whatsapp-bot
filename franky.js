@@ -1704,7 +1704,7 @@ case 'tourl':
             
             break
 
-/*******************************************************
+///**** 🗿🗿🗿🗿🗿🗿 ****//
 default:
 if (fs.existsSync(`./tmp/${from}.json`)) {
 	gelutSkuy = setGelud(`${from}`)
