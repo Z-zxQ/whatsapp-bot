@@ -575,7 +575,6 @@ men =
 │ • *Total Hit : ${hit_today.length} Hit*
 │ • *Name : ${userky}*
 │ • *Tag : @${sender.split("@")[0]}*
-│ • *Github : github.com/Franky404*
 ├「 *DOWNLOAD MENU* 」
 │
 ├ *${prefix}play*
@@ -626,6 +625,12 @@ men =
 ├ *${prefix}grup* open/close
 ├ *${prefix}cekgrup*
 ├ *${prefix}linkgc*
+│
+├「 *About Me* 」
+│
+├ *Owner : Franky*
+├ *Github : https://github.com/Franky404*
+├ *Website : https://Franky404.github.io/about*
 ╰──「 *Bot-Downloader* 」`
      frnky.sendMessage(from, men, MessageType.text, { quoted: Kyz ,contextInfo: {"mentionedJid": [sender], forwardingScore: 0, isForwarded: true }})
                     break
