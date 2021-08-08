@@ -1250,7 +1250,7 @@ case 'video':
                         const { dl_link, thumb, title, filesizeF, filesize } = res
                         axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
                         .then(async (a) => {
-                        if (Number(filesize) >= 15000) return sendMediaURL(from, thumb, 
+                        if (Number(filesize) >= 100000) return sendMediaURL(from, thumb, 
 `*PLAY VIDEO*
 
 *Judul* : ${title}
@@ -1295,7 +1295,7 @@ reply('_[ ! ] Error Saat Mengirim Lagu_')
                         const { dl_link, thumb, title, filesizeF, filesize } = res
                         axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
                         .then(async (a) => {
-                        if (Number(filesize) >= 45000) return reply(
+                        if (Number(filesize) >= 100000) return reply(
 `*judul* : ${title}
 *Filesize* : ${filesizeF}
 *Link* : ${a.data}
@@ -1328,7 +1328,7 @@ case 'ytmp4':
 				const { dl_link, thumb, title, filesizeF, filesize } = res
 				axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
 				.then((a) => {
-				if (Number(filesize) >= 15000) return sendMediaURL(from, thumb, 
+				if (Number(filesize) >= 100000) return sendMediaURL(from, thumb, 
 `*YOUTUBE MP4*
 
 *Judul* : ${title}
@@ -1405,7 +1405,7 @@ _media sedang dikirim mungkin butuh beberapa menit_`
 				const { dl_link, thumb, title, filesizeF, filesize } = res
 				axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
 				.then((a) => {
-			    if (Number(filesize) >= 15000) return sendMediaURL(from, thumb, 
+			    if (Number(filesize) >= 100000) return sendMediaURL(from, thumb, 
 `*YOUTUBE MP3*
 
 *Judul* : ${title}
