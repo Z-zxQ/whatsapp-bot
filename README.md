@@ -15,3 +15,6 @@ Thanks To All Creator Bot Whatsapp 🗿
 
 # Update 🗿?
  
+# Thanks🗿
+
+• [`Baileys`](https://github.com/adiwajshing/baileys)
