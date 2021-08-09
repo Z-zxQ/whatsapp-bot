@@ -1,19 +1,16 @@
 {
-  "name": "KY-BOTZ",
-  "version": "1.2.0",
-  "description": "🗿🗿🗿",
-  "main": "franky.js",
+  "name": "whatsapp-bot",
+  "version": "2.0.0",
+  "description": "Ya Macam Tu lh..🗿",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node franky.js"
+    "start": "node index.js"
   },
-  "keywords": [
-    "termux",
-    "whatsapp"
-  ],
+
   "author": "Franky404",
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
@@ -49,10 +46,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "🗿"
+    "url": "https://github.com/Franky404/whatsapp-bot.git"
   },
   "bugs": {
     "url": "🗿"
   },
-  "homepage": "🗿"
+  "homepage": "https://github.com/Franky404"
 }
