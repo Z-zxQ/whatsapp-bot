@@ -24,6 +24,6 @@ Thanks To All Creator Bot Whatsapp 🗿
 
 • [`Galang`](https://github.com/zobin33)
 
-• [`Hexagonz`](https://github.com/Hexagonx)
+• [`Hexagonz`](https://github.com/Hexagonz)
 
 # 🗿🤘🏻
