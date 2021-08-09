@@ -279,6 +279,7 @@ frnky.on('chat-update', async (Kyz) => {
 				},
 				only: {
 					group: 'Command ini hanya bisa di gunakan dalam group!',
+                                        groupP: 'Command ini hanya bisa di Chat Private!',
 					benned: '*Maaf Anda Di Ban Oleh Owner*',
 					owner: '*Command Ini Hanya Bisa Di Gunakan Oleh Owner!*',
 					admin: 'Perintah ini hanya bisa di gunakan oleh admin group!',
@@ -1292,6 +1293,7 @@ break
                     break
 
 case 'xnxx':
+if (isGroup) return reply(mess.only.groupP)
                     if (args.length == 0) return reply(`Example: ${prefix + command} di perkosa`)
                     query = args.join(" ")
                     get_result = await fetchJson(`https://api.lolhuman.xyz/api/xnxxsearch?apikey=genbotkey&query=${query}`)
@@ -1308,6 +1310,7 @@ case 'xnxx':
                     break
 case 'xnxxdown':
 case 'xxnxdownload':
+if (isGroup) return reply(mess.only.groupP)
 if (!q) return reply(`Example: ${prefix + command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`)
 anu = await fetchJson(`https://api.lolhuman.xyz/api/xnxx?apikey=genbotkey&url=${q}`)
 nxx = 
