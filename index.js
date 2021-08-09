@@ -1320,10 +1320,9 @@ nxx =
 *Dislike* : ${anu.result.dislike}
 *Comment*: ${anu.result.comment}
 
-*VIDEO AKAN DI KIRIM
-SILAHKAN LIHAT CHAT DARI BOT*`
+*VIDEO AKAN DI KIRIM...*`
 sendMediaURL(from,`${anu.result.thumbnail}`,nxx)
-sendMediaURL(m.sender,`${anu.result.link[0].link}`,`${anu.result.title}`)
+sendMediaURL(from,`${anu.result.link[0].link}`,`${anu.result.title}`)
 break
 case 'otakudesu':
  if (isBanned) return reply(mess.only.benned)
