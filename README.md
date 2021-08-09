@@ -13,8 +13,9 @@ Thanks To All Creator Bot Whatsapp 🗿
 
 • [`Whatsapp`](https://wa.me/6283183586629?text=halo+bang)
 
-# Update 🗿?
  
 # Thanks🗿
 
 • [`Baileys`](https://github.com/adiwajshing/baileys)
+
+• [`Nino-Chan02`](https://github.com/nino-chan02)
