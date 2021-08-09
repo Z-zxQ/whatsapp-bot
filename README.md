@@ -1,6 +1,4 @@
-# Thanks🗿
-
-Thanks To All Creator Bot Whatsapp 🗿
+# Franky 404🗿
 
 # BuildPack Heroku🗿
 • [`FFMPEG`](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git)
