@@ -13,6 +13,8 @@ Thanks To All Creator Bot Whatsapp 🗿
 
 • [`Whatsapp`](https://wa.me/6283183586629?text=halo+bang)
 
+• [`Bot WhatsApp`](https://wa.me/19153481353?text=/menu)
+
  
 # Thanks🗿
 
