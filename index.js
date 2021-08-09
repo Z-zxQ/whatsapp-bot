@@ -1066,7 +1066,7 @@ if (isBanned) return reply(mess.only.benned)
                     break
 
 case 'tomp3':
-                    if(!m.qouted) return reply('Reply Video nya!')
+                    reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(Kyz).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 					media = await frnky.downloadAndSaveMediaMessage(encmedia)
 					ran = getRandom('.mp3')
