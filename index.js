@@ -1935,37 +1935,3 @@ if (budy.startsWith('Ky')) return reply('yooo')
 	})
 }
 starts()
-/*
-*           
-*     Repo : https://github.com/MrG3P5
-*    
-                case 'casino':
-                    
-                    if (!q) return await frnky.reply(from, `Format salah!\n\nKirim perintah ${prefix}casino jumlah\nContoh: ${prefix}casino 5000`,m)
-                    var digits_only = string => [...string].every(c => '0123456789'.includes(c));
-                    if (digits_only(q) == false) return await frnky.reply(from, `Only Number!`, m)
-                    if (digits_only(q) == true) {
-                        const betcasino = Math.floor(q)
-                        const maximalcsn = 100001
-                        if (betcasino >= maximalcsn) return frnky.reply(from, `Maximal 100k`)
-                        if (checkATMuser(serial) <= betcasino) return frnky.reply(from, `*IND*\n• Sepertinya saldomu tidak cukup untuk taruhan Rp. ${convertBalanceToString(q)}, Silahkan cek dengan cara ${prefix}cekatm\n\n*ENG*\n• It looks like your balance is not enough for the bet Rp. ${convertBalanceToString(q)}, Please check your balance type ${prefix}cekatm`)
-                        if (checkATMuser(serial) >= betcasino) {
-                            await limitAddCoin(serial)
-                            confirmATM(serial, betcasino)
-                            const hadiahcsn = betcasino * 2
-                            const maxcasino = 30
-                            const thisyou = Math.floor(Math.random() * maxcasino) + 1;
-                            const thiscomputer = Math.floor(Math.random() * maxcasino) + 1;
-                            if (thisyou >= thiscomputer) {
-                                frnky.reply(from, `*RESULT*\n\n• You: ${thisyou}\n• Computer: ${thiscomputer}\n\nCongrats! You win and get Rp. ${convertBalanceToString(hadiahcsn)}`)
-                                addSaldo(serial, hadiahcsn)
-                            } else if (thisyou <= thiscomputer) {
-                                frnky.reply(from, `*RESULT*\n\n• You: ${thisyou}\n• Computer: ${thiscomputer}\n\nSorry! You lose:(`)
-                            } else if (thisyou === thiscomputer) {
-                                frnky.reply(from, `*RESULT*\n\n• You: ${thisyou}\n• Computer: ${thiscomputer}\n\nDraw!`)
-                            }
-                        }
-                    }
-                    break
-*
-*/
