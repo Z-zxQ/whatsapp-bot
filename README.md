@@ -26,4 +26,9 @@
 
 • [`Hexagonz`](https://github.com/Hexagonz)
 
+• [`Rizky`](https://github.com/Rizky878)
+
+• [`Pengguna Bot`]
+
+
 # 🗿🤘🏻
