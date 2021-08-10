@@ -1,6 +1,7 @@
 # WhatsApp-Bot
 
 # BuildPack Heroku🗿
+
 • [`FFMPEG`](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git)
 
 • [`IMAGEMAGICK`](https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git)
@@ -24,7 +25,7 @@
 
 • [`Nino-Chan02`](https://github.com/nino-chan02)
 
-• [`Ikyads`]
+• [`Ikyads`](https://github.com/ikyyads)
 
 • [`Galang`](https://github.com/zobin33)
 
