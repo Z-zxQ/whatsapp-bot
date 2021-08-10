@@ -27,7 +27,7 @@
 
 • [`Nino-Chan02`](https://github.com/nino-chan02)
 
-• [`Ikyads`](https://github.com/ikyyadiasa)
+• [`Ikyads`](https://github.com/rizkiadiasa)
 
 • [`Galang`](https://github.com/zobin33)
 
