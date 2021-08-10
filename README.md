@@ -10,6 +10,8 @@
 
 # Contact🗿
 
+• [`About Me`](https://Franky404.github.io/about)
+
 • [`Whatsapp`](https://wa.me/6283183586629?text=halo+bang)
 
 • [`Bot WhatsApp`](https://wa.me/19153481353?text=/menu)
@@ -25,7 +27,7 @@
 
 • [`Nino-Chan02`](https://github.com/nino-chan02)
 
-• [`Ikyads`](https://github.com/ikyyads)
+• [`Ikyads`](https://github.com/ikyyadiasa)
 
 • [`Galang`](https://github.com/zobin33)
 
