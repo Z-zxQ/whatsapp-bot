@@ -37,6 +37,7 @@ const setGelud = require('./lib/gameGelud.js')
 const { tiktokDown } = require("./lib/tiktok.js")
 const util = require('util');
 const imageToBase64 = require('image-to-base64')
+const translate = require("@vitalets/google-translate-api");
 const axios = require("axios")
 const fs = require('fs')
 const qrcode = require('qrcode')
@@ -660,6 +661,7 @@ men =
 ├ *${prefix}toimg*
 ├ *${prefix}sticker*
 ├ *${prefix}google*
+├ *${prefix}translate*
 ├ *${prefix}attp*
 ├ *${prefix}dafont*
 ├ *${prefix}fontdown*
@@ -709,6 +711,21 @@ men =
 ╰──「 *BOT-WhatsApp* 」`
      frnky.sendMessage(from, men, MessageType.text, { quoted: Kyz ,contextInfo: {"mentionedJid": [sender], forwardingScore: 0, isForwarded: true }})
                     break
+
+case 'tr':
+case 'translate':
+if (args.length == 0) return reply(`Example: ${prefix + command} en apa`)
+                    kode_negara = args[0]
+                    args.shift()
+                    teks = args.join(" ")
+                    translate(`${teks}`,{to:`${kode_negara}`}).then( res => {
+                    ini_txt = `*Translate*
+                    
+                     Terdeteksi Bahasa : ${res.from.language.iso}
+                     Terjemahan Nya : ${res.text}`
+                     reply(ini_txt)
+                    })
+                break    
 case 'buttons5':
               const mathdare = dare[Math.floor(Math.random() * (dare.length))]
               result = `${mathdare}`
