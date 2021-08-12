@@ -17,10 +17,6 @@ Cape bruh:v
 
 • [`Whatsapp`](https://wa.me/6283183586629?text=halo+bang)
 
-• [`Bot WhatsApp`](https://wa.me/19153481353?text=/menu)
-
-• [`Grup WhatsApp`](https://chat.whatsapp.com/DAWa1KfVj954CoiMDE3LiG)
-
  
 # Thanks🗿
 
