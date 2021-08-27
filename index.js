@@ -703,7 +703,6 @@ men =
 │ *${prefix}sourcecode*
 ├ *Owner : Franky*
 ├ *Github : https://github.com/Franky404*
-├ *Website : https://Franky404.github.io/about*
 ╰──「 *BOT-WhatsApp* 」`
      frnky.sendMessage(from, men, MessageType.text, { quoted: Kyz ,contextInfo: {"mentionedJid": [sender], forwardingScore: 0, isForwarded: true }})
                     break
