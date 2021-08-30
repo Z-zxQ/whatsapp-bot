@@ -12,7 +12,7 @@ Cape bruh:v
 
 # Contact🗿
 
-• [`About Me`](https://Franky404.github.io/about)
+• [`Bot WhatsApp`](https://wa.me/14453006449?text=/help)
 
 • [`Whatsapp`](https://wa.me/6283183586629?text=halo+bang)
 
