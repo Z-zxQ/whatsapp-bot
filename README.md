@@ -17,7 +17,7 @@ Cape bruh:v
 • [`Whatsapp`](https://wa.me/6283183586629?text=halo+bang)
 
  
-# Thanks🗿
+### Thanks🗿
 >
 • [`Baileys`](https://github.com/adiwajshing/baileys)
 
