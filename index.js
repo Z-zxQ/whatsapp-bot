@@ -590,7 +590,15 @@ case 'sider':
                     })
                     .catch((err) => reply('reply pesan bot!'))
                 break
-
+case 'tag':
+case 'mention':
+  if (!q) return reply(`Example : ${ prefix + command} @0`)
+  m.reply(q, false, {
+    contextInfo: {
+      mentionedJid: frnky.parseMention(q)
+    }
+  })
+break
 case 'ban':
 if (!isOwner) return
 const kys = Kyz.message.extendedTextMessage.contextInfo.mentionedJid[0]
@@ -685,6 +693,7 @@ men =
  *${prefix}kirim*
  *${prefix}ping*
  *${prefix}wame*
+ *${prefix}tag*
  *${prefix}q*
  *${prefix}infostick*
  *${prefix}bug*
