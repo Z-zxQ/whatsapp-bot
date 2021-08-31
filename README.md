@@ -18,9 +18,7 @@ $ npm start
 ~ Scan!
 ```
 ### Install On Heroku
-```
-~
-```
+
 # BuildPack Heroku
 
 • [`FFMPEG`](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git)
