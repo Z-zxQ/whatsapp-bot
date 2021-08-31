@@ -37,6 +37,7 @@ $ npm start
 
  
 # Thanks
+>Teman Yang Bantu Gw:)
 
 • [`Baileys`](https://github.com/adiwajshing/baileys)
 
