@@ -29,6 +29,7 @@ $ npm start
 • [`WEBP`](https://github.com/clhuang/heroku-buildpack-webp-binaries)
 
 # Contact
+>Kalo Tidak Ngerti Chat Gw!
 
 • [`Bot WhatsApp`](https://wa.me/14453006449?text=/help)
 
