@@ -673,6 +673,8 @@ men =
 
  *${prefix}voting*
  *${prefix}delvote*
+ *Vote*
+ *Devote*
 「 *CMD* 」
 
  *${prefix}setcmd*
@@ -860,6 +862,7 @@ case 'google':
                break
 // Case By Franky🗿
 case 'kirim':
+case 'f':
 if(!Kyz.quoted) return reply('reply chatnya!')
 if(!q) return reply('apa yg mau di kirim?') 
 reply('sukses mengirim pesan!')
