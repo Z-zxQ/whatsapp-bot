@@ -3,6 +3,8 @@
 Cape bruh:v
 
 ### Install On Termux
+>Tinggal y Kan Aja
+Kalo Lagi Install
 ```
 $ apt upgrade
 $ apt install git
