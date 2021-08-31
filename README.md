@@ -10,6 +10,8 @@ $ apt upgrade
 $ apt install git
 $ apt install nodejs
 $ apt install imagemagick
+$ apt install nano
+$ apt install mc
 $ git clone https://github.com/Franky404/WhatsApp-bot
 $ cd WhatsApp-bot
 $ ls
