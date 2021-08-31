@@ -2,6 +2,12 @@
 >Last update!
 Cape bruh:v
 
+<p align="center">
+    <img src="https://telegra.ph/file/927939c008e2826bc2885.jpg" width="54%" height="50%" alt="Owner Nino-BOTZ"/>
+    <br>
+    <a href="https://github.com/Nino-chan02"><img title="Owner" src="https://img.shields.io/badge/Creator-Nino-black?style=for-the-badge&logo=windows"></a>
+</p>
+
 ### Install On Termux
 >Tinggal y Kan Aja
 Kalo Lagi Install
