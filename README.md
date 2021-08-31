@@ -2,7 +2,24 @@
 >Last update!
 Cape bruh:v
 
-# BuildPack Heroku🗿
+### Install On Termux
+```
+$ apt upgrade
+$ apt install git
+$ apt install nodejs
+$ apt install imagemagick
+$ git clone https://github.com/Franky404/WhatsApp-bot
+$ cd WhatsApp-bot
+$ ls
+$ npm i
+$ npm start
+~ Scan!
+```
+### Install On Heroku
+```
+~
+```
+# BuildPack Heroku
 
 • [`FFMPEG`](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git)
 
@@ -10,14 +27,14 @@ Cape bruh:v
 
 • [`WEBP`](https://github.com/clhuang/heroku-buildpack-webp-binaries)
 
-# Contact🗿
+# Contact
 
 • [`Bot WhatsApp`](https://wa.me/14453006449?text=/help)
 
 • [`Whatsapp`](https://wa.me/6283183586629?text=halo+bang)
 
  
-# Thanks🗿
+# Thanks
 
 • [`Baileys`](https://github.com/adiwajshing/baileys)
 
@@ -34,6 +51,3 @@ Cape bruh:v
 • [`Rizky`](https://github.com/Rizky878)
 
 • [`Pengguna Bot`]
-
-
-# 🗿🤘🏻
