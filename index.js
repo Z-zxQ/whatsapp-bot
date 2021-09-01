@@ -715,6 +715,7 @@ fu = `*Info Owner*
 
 • Instagram: ff_franky69
 • Github: Franky404
+• Website: Frangky.vercel.app
 
  *BOT INFO*`
 frnky.sendButton(from,fu,'Creator: Franky404','BACK TO MENU↩️',`${prefix}help`,{quoted: Kyz})
@@ -1975,7 +1976,6 @@ if (budy.startsWith('>')){
                  reply(String(e))
                 }
                 }
-if (budy.startsWith('Ky')) return reply('yooo')
    			   		if (isGroup && isCmd && budy != undefined && body.startsWith(`X`)) {
 						console.log(budy)
 					} else {
