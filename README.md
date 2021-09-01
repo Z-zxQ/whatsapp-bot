@@ -8,7 +8,7 @@
 >Tinggal y Kan Aja
 Kalo Lagi Install
 ```
-$ apt upgrade
+$ apt upgrade && apt update
 $ apt install git
 $ apt install nodejs
 $ apt install imagemagick
