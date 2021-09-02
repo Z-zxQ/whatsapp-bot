@@ -599,11 +599,10 @@ case 'mention':
     }
   })
 break
-case 'ban':
-if (!isOwner) return
-const kys = Kyz.message.extendedTextMessage.contextInfo.mentionedJid[0]
-ban.push(kys)
-reply(`Berhasil Banned ${kys}`)
+case 'setpp':
+if(!isOwner) return 
+frnky.updateProfilePicture(from, await m.quoted.download())
+
 break
 case 'unban':
 if (!isOwner) return
