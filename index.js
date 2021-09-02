@@ -781,7 +781,7 @@ if (!q) return reply(`Example : ${prefix + command} dj tutu 30 detik`)
 res = await yts(q).catch(e => {
 reply('_[ ! ] Error Yang Anda Masukan Tidak Ada_')
 })
-let thumbInfo = `*Youtube Play▶️*
+let thumbinfo = `*Youtube Play▶️*
                
 📜 Judul : ${res.all[0].title}
 📬 ID : ${res.all[0].videoId}
@@ -790,12 +790,7 @@ let thumbInfo = `*Youtube Play▶️*
 ⚖️ Durasi : ${res.all[0].timestamp}
 🎥 Channel : ${res.all[0].author.name}
 🖇️ Link : ${res.all[0].author.url}`
-
-buttons = [{buttonId:`${prefix}buttonvideo ${res.all[0].url}`,buttonText:{displayText:'🎥VIDEO'},type:1},{buttonId:`${prefix}buttonmusic ${res.all[0].url}`,buttonText:{displayText:'🎵AUDIO'},type:1}]
-imageMessage = (await frnky.prepareMessageMedia({url:res.all[0].image},'imageMessage',{thumbnail:Buffer.alloc(0)})).imageMessage
-buttonsMessage = {contentText: thumbInfo,footerText:'Silahkan Pilih Jenis File Dibawah Ini',imageMessage,buttons,headerType:4}
-inibut = await frnky.prepareMessageFromContent(from,{buttonsMessage},{})
-frnky.relayWAMessage(inibut)
+frnky.send2Button(from,thumbinfo,'Silahkan Pilih Tipe nya!','MUSIC',`${prefix}buttonmusic ${res.all[0].url}`,'VIDEO',`${prefix}buttonvideo ${res.all[0].url}`,{quoted: Kyz})
 break
 case 'buttonmusic':
 if(!q) return reply('linknya?')
