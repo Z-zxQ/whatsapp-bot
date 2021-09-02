@@ -716,6 +716,7 @@ fu = `*Info Owner*
 • Instagram: ff_franky69
 • Github: Franky404
 • Website: Frangky.vercel.app
+• Teams: Teams404.vercel.app
 
  *BOT INFO*`
 frnky.sendButton(from,fu,'Creator: Franky404','BACK TO MENU↩️',`${prefix}help`,{quoted: Kyz})
@@ -1761,7 +1762,6 @@ if (fs.existsSync(`./tmp/${from}.json`)) {
 		winR = rand0m[Math.floor(Math.random() * rand0m.length)]
 		fs.writeFileSync(`./tmp/${from}.json`, JSON.stringify(gelutSkuy, null, 2))
 		starGame = `👑 Gelud Game 🤙🏻 
-
 
 Diantara @${gelutSkuy.Z} & @${gelutSkuy.Y}
 • Pemenangnya adalah [ @${winR} ] `
