@@ -522,12 +522,6 @@ const sendFileFromUrl = async(link, type, options) => {
                 return _win[position].win
             }
         }
-if (m.message && m.isBaileys && m.quoted && m.quoted.mtype === 'orderMessage' && !(m.quoted.token && m.quoted.orderId)) {
-         reply('Bug Troli Detected!\n\n' + require('util').format(m.key))
-        await frnky.modifyChat(m.chat, 'delete', {
-        includeStarred: false
-        })
-        }
 			colors = ['red','white','black','blue','yellow','green']
 			//convert
             const isQuoted = type == 'extendedTextMessage'
